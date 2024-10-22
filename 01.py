@@ -1,12 +1,12 @@
 from typing import Callable
 
+# Function creates dict of cache Fibonacci numbers and return function that count Fibonacci number
 def caching_fibonacci() -> Callable[[int], int]:
-    # Function creates dict of cache Fibonacci numbers and return function that count Fibonacci number
 
     cache = {}
-
+    
+    # Function takes n of search Fibonacci number and return counted Fibonacci number, save cache using closure
     def fibonacci(n: int) -> int:
-        # Function takes n of search Fibonacci number and return counted Fibonacci number, save cache using closure
 
         if(n <= 0):
             return 0
